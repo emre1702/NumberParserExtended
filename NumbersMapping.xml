@@ -1,0 +1,32 @@
+<Mappings>
+  <Number Value="1">
+    <Str>|</Str>
+    <Str>|</Str>
+    <Str>|</Str>
+    <Str>|</Str>
+  </Number>
+  <Number Value="2">
+    <Str>---</Str>
+    <Str> _|</Str>
+    <Str>|	</Str>
+    <Str>---</Str>
+  </Number>
+  <Number Value="3">
+    <Str>---</Str>
+    <Str> / </Str>
+    <Str> \ </Str>
+    <Str>-- </Str>
+  </Number>
+  <Number Value="4">
+    <Str>|   |</Str>
+    <Str>|___|</Str>
+    <Str>    |</Str>
+    <Str>    |</Str>
+  </Number>
+  <Number Value="5">
+    <Str>-----</Str>
+    <Str>|___</Str>
+    <Str>    |</Str>
+    <Str>____|</Str>
+  </Number>
+</Mappings>

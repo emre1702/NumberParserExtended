@@ -1,0 +1,40 @@
+﻿<Controls:MetroWindow x:Class="NumberParserExtended.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NumberParserExtended.View"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        Title="Number Parser Extended" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="txtResult" Margin="20 20 20 20" Text="{Binding Result}" FontSize="20"></TextBlock>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="3"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="txtNumbersFilePath" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Text="{Binding Path=NumbersFilePath}" TextWrapping="Wrap" VerticalAlignment="Bottom"/>
+            <Button x:Name="btnNumbersFileFolderDialog" Grid.Row="0" Grid.Column="3" Content="File to parse" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Command="{Binding ShowNumbersFileFolderDialogCommand}"/>
+            <TextBox x:Name="txtNumbersMappingFilePath" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Text="{Binding Path=NumbersMappingFilePath}" TextWrapping="Wrap" VerticalAlignment="Bottom"/>
+            <Button x:Name="btnNumbersMappingFileFolderDialog" Grid.Row="2" Grid.Column="3" Content="Mapping file" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" Command="{Binding ShowNumbersMappingFileFolderDialogCommand}"/>
+
+            <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Center" Grid.Row="0" Grid.RowSpan="5" Grid.Column="5" VerticalAlignment="Center" Width="81" Command="{Binding StartParsingCommand}"/>
+        </Grid>
+    </Grid>
+</Controls:MetroWindow>
