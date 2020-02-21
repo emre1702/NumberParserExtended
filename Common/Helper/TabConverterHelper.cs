@@ -7,8 +7,12 @@ namespace NumberParserExtended.Common.Helper
     {
         public void ConvertToSpaces(string[] lines)
         {
-            // In text editors the tabs go either to the next character in the next columns 
-            // or to the tab width that was set (usually 4) if no character was found before.
+            // In text editors the columns are kinda splitted by tab size.
+            // If you enter a tab it can have a width of 1 to tab-width, depending on the position it was written.
+            // The tabs go to the next tab position (tab size = 4 => 0, 4, 8, 12, 16, 20)
+            // e.g. 3. column => 4. column, width = 1   
+            // 4. column => 8. column, width 4  
+            // 5. column => 8. column, width 3      etc.
             for (int i = 0; i < lines.Length; ++i)
             {
                 var line = lines[i];
